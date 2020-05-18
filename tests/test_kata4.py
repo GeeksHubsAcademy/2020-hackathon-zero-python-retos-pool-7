@@ -2,68 +2,68 @@ import pytest
 
 from kata4.snake import Game, Snake
 
-def test_dead_in_top():
-    snake = Snake()
-    game = Game()
+# def test_dead_in_top():
+#     snake = Snake()
+#     game = Game()
 
-    snake.position = [512, 50]
+#     snake.position = [512, 50]
 
-    game.dead(snake)
-    assert(game.run == False)
+#     game.dead(snake)
+#     assert(game.run == False)
 
-def test_dead_in_bot():
-    snake = Snake()
-    game = Game()
+# def test_dead_in_bot():
+#     snake = Snake()
+#     game = Game()
 
-    snake.position = [0, 50]
+#     snake.position = [0, 50]
 
-    game.dead(snake)
-    assert(game.run == False)
+#     game.dead(snake)
+#     assert(game.run == False)
 
-def test_dead_in_left():
-    snake = Snake()
-    game = Game()
+# def test_dead_in_left():
+#     snake = Snake()
+#     game = Game()
 
-    snake.position = [200, 512]
+#     snake.position = [200, 512]
 
-    game.dead(snake)
-    assert(game.run == False)
+#     game.dead(snake)
+#     assert(game.run == False)
 
-def test_dead_in_right():
-    snake = Snake()
-    game = Game()
+# def test_dead_in_right():
+#     snake = Snake()
+#     game = Game()
 
-    snake.position = [200, 0]
+#     snake.position = [200, 0]
 
-    game.dead(snake)
-    assert(game.run == False)
+#     game.dead(snake)
+#     assert(game.run == False)
 
-def test_live():
-    snake = Snake()
-    game = Game()
+# def test_live():
+#     snake = Snake()
+#     game = Game()
 
-    snake.position = [100, 50]
+#     snake.position = [100, 50]
 
-    game.dead(snake)
-    assert(game.run == True)
+#     game.dead(snake)
+#     assert(game.run == True)
 
-def test_score_plus():
-    snake = Snake()
-    game = Game()
+# def test_score_plus():
+#     snake = Snake()
+#     game = Game()
 
-    snake.position = game.food_pos
+#     snake.position = game.food_pos
 
-    game.eat(snake)
-    assert(game.score == 1)
+#     game.eat(snake)
+#     assert(game.score == 1)
 
-def test_food_random():
-    game = Game()
+# def test_food_random():
+#     game = Game()
 
-    food1 = game.food_pos
-    game.food_spawn()
-    food2 = game.food_pos
+#     food1 = game.food_pos
+#     game.food_spawn()
+#     food2 = game.food_pos
 
-    assert(food1 != food2)
+#     assert(food1 != food2)
 
 def test_controller_snake_UP():
     snake = Snake()
